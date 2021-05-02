@@ -3,10 +3,7 @@ from .forms import CustomerOrderForm
 from django.contrib import messages
 from .models import *
 
-# Create your views here.
-#sundar
-#sundar-12345 in sqlite3
-#sundar12345 in rds
+
 
 def home(request):
     gallery = TotalImages.objects.all() #multiple data can be fetched, but only 18 photos will we display circulating all data from database

@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf import settings
 
 urlpatterns = [
-    path('admin-sundar-123/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include("photography.urls"))
 ]
 if settings.DEBUG:
