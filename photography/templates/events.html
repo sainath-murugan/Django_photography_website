@@ -1,0 +1,41 @@
+{% extends "layout_for_gallery.html" %}
+{% block content %}
+<div id="fh5co-intro-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center animate-box">
+				<h2 class="intro-heading">Events</h2>
+					<p><span>captured<i class="icon-heart3"></i> by experts of <a href="{% url 'contact' %}">Smile studios</a></span></p>
+			</div>
+		</div>
+	</div>
+</div>
+		<div id="fh5co-photos-section">
+			
+			<div class="container">
+				
+				<div class="row text-center">
+					{% for items in images %}
+					    {% if items %}
+					        <div class="col-md-4 animate-box">
+					
+						        <a href="{{items.image.url}}" class="grid-photo img-popup" style="background-image: url({{items.image.url}});">
+							         <div class="desc">
+							    	    <h3>{{items.title}}<br>
+                                            <span>{{ items.description }}</span>
+                                        </h3>
+							         </div>
+						       </a>
+					
+					        </div>
+                        {% endif %}
+					   
+					{% endfor %}
+					
+					
+				</div>
+				
+			</div>
+			
+		</div>
+{% endblock %}
